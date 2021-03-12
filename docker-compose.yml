@@ -1,0 +1,32 @@
+version: "3"
+services:
+  valheim:
+    image: mbround18/valheim:latest
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - 2456:2456/udp
+      - 2457:2457/udp
+      - 2458:2458/udp
+    environment:
+      PORT: 2456
+      NAME: "Conceptual Valheim Server"
+      WORLD: "SQUAD"
+      PASSWORD: "pass1234"
+      TZ: "America/Toronto"
+      PUBLIC: 0
+      AUTO_UPDATE: 0
+      AUTO_UPDATE_SCHEDULE: "0 1 * * *"
+      AUTO_BACKUP: 1
+      AUTO_BACKUP_SCHEDULE: "*/30 * * * *"
+      AUTO_BACKUP_REMOVE_OLD: 1
+      AUTO_BACKUP_DAYS_TO_LIVE: 3
+      AUTO_BACKUP_ON_UPDATE: 1
+      AUTO_BACKUP_ON_SHUTDOWN: 1
+      UPDATE_ON_STARTUP: 0
+    volumes:
+      - ./data/backups:/home/steam/backups
+      - ./data/saves:/home/steam/.config/unity3d/IronGate/Valheim
+      - ./data/logs:/home/steam/valheim/logs
+      - ./data/mods-configs/valheim_plus.cfg:/home/steam/valheim/BepInEx/config/valheim_plus.cfg
