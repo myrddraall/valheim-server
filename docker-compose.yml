@@ -5,6 +5,7 @@ services:
     build:
       context: .
       dockerfile: Dockerfile
+    restart: always
     ports:
       - 2456:2456/udp
       - 2457:2457/udp
@@ -16,7 +17,7 @@ services:
       PASSWORD: "pass1234"
       TZ: "America/Toronto"
       PUBLIC: 0
-      AUTO_UPDATE: 0
+      AUTO_UPDATE: 1
       AUTO_UPDATE_SCHEDULE: "0 1 * * *"
       AUTO_BACKUP: 1
       AUTO_BACKUP_SCHEDULE: "0 */6 * * *"
@@ -24,7 +25,7 @@ services:
       AUTO_BACKUP_DAYS_TO_LIVE: 3
       AUTO_BACKUP_ON_UPDATE: 1
       AUTO_BACKUP_ON_SHUTDOWN: 1
-      UPDATE_ON_STARTUP: 0
+      UPDATE_ON_STARTUP: 1
     volumes:
       - ./data/backups:/home/steam/backups
       - ./data/saves:/home/steam/.config/unity3d/IronGate/Valheim
