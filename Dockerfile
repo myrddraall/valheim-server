@@ -1,10 +1,8 @@
 FROM mbround18/valheim:latest
 
-WORKDIR /home/steam/valheim/BepInEx/config
-COPY  valheim_plus.cfg .
-
 WORKDIR /home/steam/tmp
 RUN mkdir -p /home/steam/valheim
+
 ADD ["https://github.com/valheimPlus/ValheimPlus/releases/download/0.9.9.11/UnixServer.zip", "unix-server.zip"]
 RUN unzip -o unix-server.zip -d unix-server
 RUN cp -r unix-server/* /home/steam/valheim

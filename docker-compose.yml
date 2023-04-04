@@ -2,6 +2,7 @@ version: "3"
 services:
   valheim:
     image: mbround18/valheim:latest
+    stop_signal: SIGINT
     build:
       context: .
       dockerfile: Dockerfile
@@ -30,11 +31,13 @@ services:
         https://gcdn.thunderstore.io/live/repository/packages/ValheimModding-Jotunn-2.11.2.zip,
         https://gcdn.thunderstore.io/live/repository/packages/MSchmoecker-MultiUserChest-0.4.4.zip,
         https://gcdn.thunderstore.io/live/repository/packages/MSchmoecker-ItemHopper-0.3.2.zip,
-        https://gcdn.thunderstore.io/live/repository/packages/Blockheim-LetMeSleep-1.0.2.zip
-    
+        https://gcdn.thunderstore.io/live/repository/packages/Blockheim-LetMeSleep-1.0.2.zip,
+        https://gcdn.thunderstore.io/live/repository/packages/Advize-PlantEverything-1.13.3.zip,
+        https://gcdn.thunderstore.io/live/repository/packages/LoadedGun-EquipMultipleUtilityItems-0.4.0.zip
+
 
     volumes:
-      - ./data/backups:/home/steam/backups
       - ./data/saves:/home/steam/.config/unity3d/IronGate/Valheim
+      - ./data/backups:/home/steam/backups
       - ./data/logs:/home/steam/valheim/logs
-      - ./data/mods-configs:/home/steam/valheim/BepInEx/config
+      - ./data/config:/home/steam/valheim/BepInEx/config
