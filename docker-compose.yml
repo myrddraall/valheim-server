@@ -29,6 +29,16 @@ services:
       TYPE: BepInExFull
       MODS: |
         https://gcdn.thunderstore.io/live/repository/packages/Advize-PlantEverything-1.13.4.zip,
+        https://gcdn.thunderstore.io/live/repository/packages/Azumatt-AllTheBases-1.0.5.zip,
+        https://gcdn.thunderstore.io/live/repository/packages/Azumatt-AzuAreaRepair-1.0.1.zip,
+        https://gcdn.thunderstore.io/live/repository/packages/Azumatt-AzuMiscPatches-1.0.3.zip,
+        https://gcdn.thunderstore.io/live/repository/packages/Azumatt-AzuWearNTearPatches-1.0.2.zip,
+        https://gcdn.thunderstore.io/live/repository/packages/Azumatt-AzuWorkbenchTweaks-1.0.1.zip,
+        https://gcdn.thunderstore.io/live/repository/packages/Marf-FuelEternal-1.2.1.zip,
+        https://gcdn.thunderstore.io/live/repository/packages/Azumatt-HaulersHelper-1.0.0.zip
+        https://gcdn.thunderstore.io/live/repository/packages/Azumatt-MagicEitrBase-1.1.3.zip,
+        https://gcdn.thunderstore.io/live/repository/packages/Azumatt-MaxPlayerCount-1.1.1.zip,
+        https://gcdn.thunderstore.io/live/repository/packages/Azumatt-PerfectPlacement-1.0.2.zip,
         https://gcdn.thunderstore.io/live/repository/packages/Blockheim-LetMeSleep-1.0.2.zip,
         https://gcdn.thunderstore.io/live/repository/packages/Digitalroot-Heightmap_Unlimited_Remake-1.3.7.zip,
         https://gcdn.thunderstore.io/live/repository/packages/LoadedGun-EquipMultipleUtilityItems-0.4.0.zip,
@@ -37,6 +47,7 @@ services:
         https://gcdn.thunderstore.io/live/repository/packages/Smoothbrain-ConfigWatcher-1.0.1.zip,
         https://gcdn.thunderstore.io/live/repository/packages/SpikeHimself-XPortal-1.2.10.zip,
         https://gcdn.thunderstore.io/live/repository/packages/ValheimModding-Jotunn-2.11.2.zip
+        https://gcdn.thunderstore.io/live/repository/packages/VegettaPT-MultiCraft-1.2.0.zip
 
 
     volumes:
