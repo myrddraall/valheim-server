@@ -1,4 +1,4 @@
-FROM mbround18/valheim:latest
+FROM mbround18/valheim:1.8
 
 WORKDIR /home/steam/tmp
 RUN mkdir -p /home/steam/valheim
